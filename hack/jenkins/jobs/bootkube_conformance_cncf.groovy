@@ -2,9 +2,9 @@
 repo = "kubernetes-incubator/bootkube"
 
 // CONFIG
-org_whitelist = ['coreos', 'coreos-inc']
+org_allowlist = ['coreos', 'coreos-inc']
 job_admins = ['ericchiang', 'rithujohn191', 'rphillips']
-user_whitelist = job_admins
+user_allowlist = job_admins
 
 // JOBS
 job_name = "tku-bootkube-conformance-cncf"

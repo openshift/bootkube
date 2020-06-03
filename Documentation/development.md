@@ -57,7 +57,7 @@ Jobs prefixed with `tku-` are running on the new Jenkins instance.
 
 Commenting on the PR:
 
--   `ok to test`: whitelists an external contributor's PR as safe to test.
+-   `ok to test`: allowlists an external contributor's PR as safe to test.
 -   `coreosbot run [job_name]`: re-runs the named job. The job name is always the same as the build context reported to GitHub. So if there is a failed build for `tku-bootkube-e2e-calico`, you can re-trigger it by commenting, `coreosbot run tku-bootkube-e2e-calico`.
 
 
@@ -67,7 +67,7 @@ The basic test suite should run automatically on PRs, but can also be triggered 
 
 Commenting on the PR:
 
-* `ok to test`: whitelists an external contributor's PR as safe to test.
+* `ok to test`: allowlists an external contributor's PR as safe to test.
 * `coreosbot run e2e`: re-runs the end-to-end test suite.
 * `coreosbot run e2e calico`: re-runs the Calico end-to-end test suite.
 * `coreosbot run e2e checkpointer`: can be used to specifically test new checkpointer code.

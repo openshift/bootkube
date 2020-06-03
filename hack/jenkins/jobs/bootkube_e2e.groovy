@@ -2,9 +2,9 @@
 repo = "kubernetes-incubator/bootkube"
 
 // CONFIG
-org_whitelist = ['coreos', 'coreos-inc']
+org_allowlist = ['coreos', 'coreos-inc']
 job_admins = ['colemickens', 'ericchiang', 'rithujohn191', 'rphillips']
-user_whitelist = job_admins
+user_allowlist = job_admins
 
 // JOBS
 network_providers = ['flannel', 'calico']
@@ -22,8 +22,8 @@ network_providers.each { np ->
       triggers {
         githubPullRequest {
           admins(job_admins)
-          userWhitelist(user_whitelist)
-          orgWhitelist(org_whitelist)
+          userAllowlist(user_allowlist)
+          orgAllowlist(org_allowlist)
           useGitHubHooks(true)
           onlyTriggerPhrase(false)
           triggerPhrase("coreosbot run ${job_name}")
